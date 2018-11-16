@@ -1,0 +1,19 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "First experience with microservice architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igornfaustino/microservices.git"
+  },
+  "author": "igornfaustino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igornfaustino/microservices/issues"
+  },
+  "homepage": "https://github.com/igornfaustino/microservices#readme"
+}
