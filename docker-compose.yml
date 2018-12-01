@@ -8,24 +8,28 @@ services:
   twittersearch:
     build: ./twitterSearch
     ports:
-      - "3001:3001"
+      - "3001:3000"
     environment:
-    - PORT=3001
+    - PORT=3000
   twitterpost:
     build: ./twitterPost
     ports:
-      - "3002:3002"
+      - "3002:3000"
     environment:
-    - PORT=3002
+    - PORT=3000
   twitterretweet:
     build: ./twitterRetweet
     ports:
-      - "3003:3003"
+      - "3003:3000"
     environment:
-    - PORT=3003
+    - PORT=3000
   auth:
     build: ./auth
     ports:
-      - "3004:3004"
+      - "3004:3000"
     environment:
-    - PORT=3004
+    - PORT=3000
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:3000"

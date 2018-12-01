@@ -5,12 +5,22 @@
     height: 100vh;
     left: 70%;
     margin-left: -3px;
-    top: 6.4%;
+    position: absolute;
+    z-index: 0;
+    top: 6.3%;
 }
 
 .header{
-    background-color: #04b5d483;
+    background-color: #1da1f2;
     padding: 8px;
+    position: absolute;
+    width: 100vw;
+    height: 7vh;
+    z-index: 1;
+}
+
+.margin-top {
+    margin-top: 8vh;
 }
 
 .tweets{

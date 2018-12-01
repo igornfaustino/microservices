@@ -7,10 +7,10 @@ const cors = require('cors');
 
 const app = express();
 
-const searchServiceProxy = httpProxy("http://twittersearch:3001");
-const postServiceProxy = httpProxy("http://twitterpost:3002");
-const retweetServiceProxy = httpProxy("http://twitterretweet:3003");
-const authServiceProxy = httpProxy("http://auth:3004");
+const searchServiceProxy = httpProxy("http://twittersearch:3000");
+const postServiceProxy = httpProxy("http://twitterpost:3000");
+const retweetServiceProxy = httpProxy("http://twitterretweet:3000");
+const authServiceProxy = httpProxy("http://auth:3000");
 
 // MW
 app.use(cors())
