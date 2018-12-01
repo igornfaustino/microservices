@@ -3,6 +3,7 @@ const logger = require("morgan");
 const helmet = require("helmet");
 const httpProxy = require("express-http-proxy");
 const bodyParser = require('body-parser')
+const cors = require('cors');
 
 const app = express();
 
@@ -12,6 +13,7 @@ const retweetServiceProxy = httpProxy("http://twitterretweet:3003");
 const authServiceProxy = httpProxy("http://auth:3004");
 
 // MW
+app.use(cors())
 app.use(logger("short"))
 app.use(helmet());
 app.use(express.json())

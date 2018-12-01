@@ -1,0 +1,25 @@
+.vl {
+    border-left: 4px groove rgba(0, 0, 0, 0.247);
+    height: 500px;
+    position: fixed;
+    height: 100vh;
+    left: 70%;
+    margin-left: -3px;
+    top: 6.4%;
+}
+
+.header{
+    background-color: #04b5d483;
+    padding: 8px;
+}
+
+.tweets{
+    margin-top: 2%;
+    margin-left: 40%;
+}
+
+.row-style{
+    margin-top: 2%;
+    margin-left: 10px;
+}
+
