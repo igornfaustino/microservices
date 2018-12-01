@@ -11,27 +11,21 @@ services:
       - "3001:3001"
     environment:
     - PORT=3001
-    - TWITTER_CONSUMER_KEY=Q7NfVJHeY58mMimTUtiXrr8V9
-    - TWITTER_CONSUMER_SECRET=u3cuT0SxZEIpJ4lOh8uc8KBD9pEpIqT47SoPH3lnWyduxkbzgb
-    - TWITTER_ACCESS_TOKEN_KEY=1020811837359775745-6pvKgDzicBf9ktyZWOyXDSVR2TVDBE
-    - TWITTER_ACCESS_TOKEN_SECRET=Q5LDWZTixgrnhn8OpIYnXVZtCvktKnXqvkIuk3lJcXLYu
   twitterpost:
     build: ./twitterPost
     ports:
       - "3002:3002"
     environment:
     - PORT=3002
-    - TWITTER_CONSUMER_KEY=Q7NfVJHeY58mMimTUtiXrr8V9
-    - TWITTER_CONSUMER_SECRET=u3cuT0SxZEIpJ4lOh8uc8KBD9pEpIqT47SoPH3lnWyduxkbzgb
-    - TWITTER_ACCESS_TOKEN_KEY=1020811837359775745-6pvKgDzicBf9ktyZWOyXDSVR2TVDBE
-    - TWITTER_ACCESS_TOKEN_SECRET=Q5LDWZTixgrnhn8OpIYnXVZtCvktKnXqvkIuk3lJcXLYu
   twitterretweet:
     build: ./twitterRetweet
     ports:
       - "3003:3003"
     environment:
     - PORT=3003
-    - TWITTER_CONSUMER_KEY=Q7NfVJHeY58mMimTUtiXrr8V9
-    - TWITTER_CONSUMER_SECRET=u3cuT0SxZEIpJ4lOh8uc8KBD9pEpIqT47SoPH3lnWyduxkbzgb
-    - TWITTER_ACCESS_TOKEN_KEY=1020811837359775745-6pvKgDzicBf9ktyZWOyXDSVR2TVDBE
-    - TWITTER_ACCESS_TOKEN_SECRET=Q5LDWZTixgrnhn8OpIYnXVZtCvktKnXqvkIuk3lJcXLYu
+  auth:
+    build: ./auth
+    ports:
+      - "3004:3004"
+    environment:
+    - PORT=3004

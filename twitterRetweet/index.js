@@ -3,15 +3,16 @@ const logger = require("morgan");
 const helmet = require("helmet");
 const bodyParser = require('body-parser')
 const Twitter = require('twitter');
+const config = require('./config')
 
 const app = express();
 
 
 const client = new Twitter({
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+  consumer_key: config.TWITTER_CONSUMER_KEY,
+  consumer_secret: config.TWITTER_CONSUMER_SECRET,
+  access_token_key: config.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: config.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 // MW

@@ -2,13 +2,14 @@ const express = require("express");
 const logger = require("morgan");
 const helmet = require("helmet");
 const httpProxy = require("express-http-proxy");
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 
 const app = express();
 
 const searchServiceProxy = httpProxy("http://twittersearch:3001");
 const postServiceProxy = httpProxy("http://twitterpost:3002");
 const retweetServiceProxy = httpProxy("http://twitterretweet:3003");
+const authServiceProxy = httpProxy("http://auth:3004");
 
 // MW
 app.use(logger("short"))
@@ -30,6 +31,10 @@ app.post("/post/", (req, res, next) => {
 
 app.post("/retweet/:id", (req, res, next) => {
 	retweetServiceProxy(req, res, next);
+})
+
+app.post("/auth", (req, res, next) => {
+	authServiceProxy(req, res, next);
 })
 
 app.listen(process.env.PORT, () => {
