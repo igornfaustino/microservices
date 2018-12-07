@@ -28,7 +28,7 @@ module.exports = {
 
 # How to run
 
-To run the aplication you need to install the [doker](https://www.docker.com/).
+To run the aplication you need to install the [docker](https://www.docker.com/).
 After that you just need to type the follow line on th root directory.
 
 ```bash
